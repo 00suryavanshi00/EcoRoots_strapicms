@@ -32,7 +32,7 @@ jobs:
             --build-arg DATABASE_USER=${{ secrets.DATABASE_USER }} \
             --build-arg DATABASE_PASSWORD=${{ secrets.DATABASE_PASSWORD }} \
             --build-arg DATABASE_NAME=${{ secrets.DATABASE_NAME }} \
-            --build-arg GCS_BUCKET_NAME=${{ secrets.GCS_BUCKET_NAME}}
+            --build-arg GCS_BUCKET_NAME=${{ secrets.GCS_BUCKET_NAME}} \
             -t "$IMAGE_URI" .
           docker push "$IMAGE_URI"
 
